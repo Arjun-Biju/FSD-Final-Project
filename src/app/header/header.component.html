@@ -1,0 +1,52 @@
+<mat-toolbar color="primary"  style="background-color: black; color: aliceblue;">
+  <button mat-icon-button (click)="toggleSidenav()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Learntos</span>
+</mat-toolbar>
+
+<mat-sidenav-container style="background-color: silver;">
+  <mat-sidenav #sidenav mode="side" [opened]="sidenavOpened">
+    <mat-nav-list>
+      <span>Find your new career</span>
+      <a mat-list-item routerLink="/option1">
+        <mat-icon>work</mat-icon>
+        <span>For Business</span>
+      </a>
+      <a mat-list-item routerLink="/option2">
+        <mat-icon>article</mat-icon>
+        <span>For corporates</span>
+      </a>
+      <a mat-list-item routerLink="/option2">
+        <mat-icon>account_balance</mat-icon>
+        <span>For Universities</span>
+      </a>
+      <a mat-list-item routerLink="/option2">
+        <mat-icon>book</mat-icon>
+        <span>For Students</span>
+      </a>
+      <a mat-list-item routerLink="/option2">
+        <mat-icon>icon2</mat-icon>
+        <span>Post your knowledge</span>
+      </a>
+      <a mat-list-item routerLink="/option2">
+        <mat-icon>icon2</mat-icon>
+        <span>B.O.Y</span>
+      </a>
+      <a mat-list-item routerLink="/option2">
+        <mat-icon>login</mat-icon>
+        <span>LOGIN</span>
+      </a>
+      <a mat-list-item routerLink="/option2">
+        <mat-icon>icon2</mat-icon>
+        <span>Join for free</span>
+      </a>
+      <!-- Repeat for the other options -->
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <!-- Your main content here -->
+    <p>Lorem Ipsum</p>
+  </mat-sidenav-content>
+</mat-sidenav-container>
