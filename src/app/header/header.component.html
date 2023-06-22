@@ -3,54 +3,40 @@
     <mat-icon>menu</mat-icon>
   </button>
   <img src="https://i.pinimg.com/originals/5d/6e/73/5d6e7332b441910f0a1fdb9903ebbee4.jpg" alt="logo" style="height: 30px; width: 110px;">
-  <form class="search-form" style="margin-left: 75%; font-family: Verdana, Geneva, Tahoma, sans-serif;">
-    <input type="text" placeholder="Search..." />
+  <form class="search-form" style="margin-left: 70%; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+    <input type="text" placeholder="Search..." /> 
     <button type="submit" style="margin-left: 10px;">Search</button>
   </form>
 </mat-toolbar>
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side" [opened]="sidenavOpened"  style="background-color: bisque;">
-    <mat-nav-list style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-left: 5px;">
+    <mat-nav-list style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-left: 5px; line-height: 30px;">
       <span><b>Find your new career</b></span>
       <a mat-list-item routerLink="/option1">
-        <mat-icon>work</mat-icon>
         <span>For Business</span>
       </a>
       <a mat-list-item routerLink="/option2">
-        <mat-icon>article</mat-icon>
         <span>For corporates</span>
       </a>
       <a mat-list-item routerLink="/option2">
-        <mat-icon>account_balance</mat-icon>
         <span>For Universities</span>
       </a>
       <a mat-list-item routerLink="/option2">
-        <mat-icon>book</mat-icon>
         <span>For Students</span>
       </a><br><br>
       <a mat-list-item routerLink="/option2">
-        <mat-icon>icon2</mat-icon>
         <span><b>Post your knowledge</b></span>
       </a>
       <a mat-list-item routerLink="/option2">
-        <mat-icon>icon2</mat-icon>
         <span><b>B.O.Y</b></span>
       </a>
       <a mat-list-item routerLink="/option2">
-        <mat-icon>login</mat-icon>
         <span><b>Login</b></span>
       </a>
       <a mat-list-item routerLink="/option2">
-        <mat-icon>icon2</mat-icon>
         <span><b>Join for free</b></span>
       </a>
       <!-- Repeat for the other options -->
     </mat-nav-list>
   </mat-sidenav>
-
-  <mat-sidenav-content  style="background-color: blue;">
-    <!-- Your main content here -->
-    <p style="color: aliceblue;">Lorem Ipsum</p>
-  </mat-sidenav-content>
-</mat-sidenav-container>
