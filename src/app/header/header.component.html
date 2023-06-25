@@ -1,4 +1,4 @@
-<mat-toolbar color="primary"  style="background-color: silver;">
+<!-- <mat-toolbar color="primary"  style="background-color: silver;">
   <button mat-icon-button (click)="toggleSidenav()">
     <mat-icon>menu</mat-icon>
   </button>
@@ -7,7 +7,30 @@
     <input type="text" placeholder="Search..." /> 
     <button type="submit" style="margin-left: 10px;">Search</button>
   </form>
+</mat-toolbar> -->
+
+<mat-toolbar class="split-header" color="primary" style="background-color: silver;">
+  <button mat-icon-button (click)="toggleSidenav()">
+    <mat-icon>=</mat-icon>
+  </button>
+  <div class="container">
+    <div class="top-navigation">
+      <a mat-button routerLink="/">For Corporates</a>
+      <a mat-button routerLink="/">For Business</a>
+      <a mat-button routerLink="/">For Universities</a>
+      <a mat-button routerLink="/">For Students</a>
+    </div>
+    <div class="bottom-navigation" style="margin-left: 950px; scale: 110%;">
+      <span class="spacer"></span>
+      <a mat-button routerLink="/">Post Your Knowledge</a>
+      <b>
+      <a mat-button routerLink="/">LOGIN</a>
+      <a mat-button routerLink="/">SIGN UP</a>
+    </b>
+    </div>
+  </div>
 </mat-toolbar>
+
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side" [opened]="sidenavOpened"  style="background-color: bisque;">
