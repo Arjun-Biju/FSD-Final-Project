@@ -1,3 +1,32 @@
 a{
     text-decoration: none;
 }
+
+.bottom-navigation a{
+    scale: 110%;
+    margin-left: 5px;
+    flex: content;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.bottom-navigation a:hover{
+    scale: 115%;
+}
+
+.top-navigation{
+    background-color: black;
+    color: white;
+}
+
+.top-navigation a{
+    border: 2px inset silver;
+    border-radius: 10%;
+    padding: 5px 5px 5px 5px;
+    margin: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.top-navigation a:hover{
+    background-color: white;
+    color: black;
+}

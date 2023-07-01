@@ -1,23 +1,26 @@
-<img src="https://i.pinimg.com/originals/5d/6e/73/5d6e7332b441910f0a1fdb9903ebbee4.jpg" alt="LEARNTOS" style="height: 35px; width: 100px; margin-left: 10px;">
-
-<mat-toolbar class="split-header" color="primary" style="background-color: silver;">
+<div class="top-navigation">
+  <a mat-button routerLink="/">For Corporates</a>
+  <a mat-button routerLink="/">For Business</a>
+  <a mat-button routerLink="/">For Universities</a>
+  <a mat-button routerLink="/">For Students</a>
+</div>
+<mat-toolbar class="split-header" color="primary">
   <button mat-icon-button (click)="toggleSidenav()">
     <mat-icon>=</mat-icon>
   </button>
   <div class="container">
-    <div class="top-navigation">
-      <a mat-button routerLink="/">For Corporates</a>
-      <a mat-button routerLink="/">For Business</a>
-      <a mat-button routerLink="/">For Universities</a>
-      <a mat-button routerLink="/">For Students</a>
-    </div>
-    <div class="bottom-navigation" style="margin-left: 950px; scale: 110%;">
-      <span class="spacer"></span>
-      <a mat-button routerLink="/">Post Your Knowledge</a>
-      <b>
-      <a mat-button routerLink="/">LOGIN</a>
-      <a mat-button routerLink="/">SIGN UP</a>
-    </b>
+    <div class="bottom-navigation">
+      <img src="https://i.pinimg.com/originals/5d/6e/73/5d6e7332b441910f0a1fdb9903ebbee4.jpg" alt="LEARNTOS" style="height: 35px; width: 100px; margin-left: 10px; margin-top: 10px;">
+      <form style="margin-top: 5px; float: right; margin-right: 1000px; margin-top: 15px;">
+        <input type="text" id="search-input" placeholder="What do you want to learn?" style="height: 20px; width: 200px;"/>
+        <button type="submit" style="height: 25px;">Search</button>
+      </form>
+        <span class="spacer" style="margin-left: 950px;"></span>
+        <a mat-button routerLink="/">Post Your Knowledge</a>
+        <b>
+        <a mat-button routerLink="/">LOGIN</a>
+        <a mat-button routerLink="/">SIGN UP</a>
+        </b>
     </div>
   </div>
 </mat-toolbar>
@@ -27,7 +30,7 @@
   <mat-sidenav #sidenav mode="side" [opened]="sidenavOpened"  style="background-color: bisque; width: 200px;">
     <mat-nav-list style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-left: 5px; line-height: 30px;">
       <span><b>Find your new career</b></span>
-      <a mat-list-item routerLink="/option1">
+      <a mat-list-item routerLink="/option1" href="#">
         <span>For Business</span>
       </a>
       <a mat-list-item routerLink="/option2">
