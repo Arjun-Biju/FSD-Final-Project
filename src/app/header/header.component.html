@@ -57,24 +57,23 @@
       <!-- Repeat for the other options -->
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content style="width: 100%; text-overflow: clip;"><div class="content" role="main">
-      <div class="slider-container" style="width: 900px;">  
-        <button mat-icon-button (click)="previousSlide()">
-          <mat-icon>keyboard_arrow_left</mat-icon>
-        </button>
-        <div class="slide" [style.transform]="'translateX(' + (-slideIndex * 100) + '%)'">
-          <div *ngFor="let slide of slides" class="slide-content">
-            <h2>{{ slide.heading }}</h2>
-            <p>{{ slide.body }}</p>
-            <a [href]="slide.link">
-              <img [src]="slide.image" alt="Slide Image">
-            </a>
-          </div>
+  <mat-sidenav-content style="text-overflow: clip;">
+    <div class="slider-container">  
+      <button mat-icon-button (click)="previousSlide()">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+      <div class="slide" [style.transform]="'translateX(' + (-slideIndex * 100) + '%)'">
+        <div *ngFor="let slide of slides" class="slide-content">
+          <h1>{{ slide.heading }}</h1>
+          <p>{{ slide.body }}</p>
+          <a [href]="slide.link">
+            <img [src]="slide.image" alt="Slide Image">
+          </a>
         </div>
-        <button mat-icon-button (click)="nextSlide()">
-          <mat-icon>keyboard_arrow_right</mat-icon>
-        </button>
       </div>
+      <button mat-icon-button (click)="nextSlide()">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
