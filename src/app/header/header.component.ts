@@ -1,6 +1,8 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { UserServiceService } from 'src/services/user-service.service';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +11,32 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class HeaderComponent {
   showFiller = false;
+  constructor(private userservice:UserServiceService, private http:HttpClient) {
+    
+  }
   @ViewChild('sidenav')
   sidenav!: MatSidenav;
   sidenavOpened = false;
+  username = "";
+  password = "";
+  baseURL = "https://localhost:7155"
+  onSubmit(){
+    var formData = new FormData();
+    const headers = new HttpHeaders();
+    
+    formData.append('email',this.username)
+    formData.append('password',this.password)
+    var data = {'email':this.username,'password':this.password}
+      this.http.post(this.baseURL + '/api/User/Login', data).subscribe(
+        (response) => {
+          console.log(response)
+        },
+
+        (error) => {
+          console.log(error)
+        }
+      )
+  }
   slides = [
     {
       heading: 'Slide 1 Heading',
