@@ -1,0 +1,154 @@
+// blogs
+.blog-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .blog-container button {
+    background-color: #eaeaea; 
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #333;
+    z-index: 2;
+    padding: 8px;
+    border-radius: 50%;
+  }
+  
+  .blog-container button:first-child {
+    left: 10px;
+  }
+  
+  .blog-container button:last-child {
+    right: 10px;
+  }
+  
+  .blog {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+   
+  }
+  
+  .blog-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+  
+  .card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .image-container {
+    flex: 0 0 40%;
+  }
+  
+  .image-container a {
+    display: block;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .content-container {
+    flex: 0 0 60%;
+    padding: 0 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+  }
+   
+    
+  // testimonials
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+  }
+  .container >*{
+    flex: 1 1 200px;
+  }
+  h1{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 40px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  .example-card {
+    max-width: 300px;
+    margin: 25px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+  }
+  
+  .example-header-image {
+    padding-right: 20px;
+  }
+  mat-card-content p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.4;
+  }
+  .mat-card-title,
+  .mat-card-subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  .quote-icon {
+    font-size: 24px;
+    color:black;
+    transform: rotate(180deg);
+  }
+  .rating-stars {
+    color:gold;
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  .rating-stars .active {
+    color: orange;
+  }
+  .test-image{
+    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  

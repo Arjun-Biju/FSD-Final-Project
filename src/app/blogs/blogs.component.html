@@ -1,0 +1,59 @@
+<!-- blog -->
+<div class="blog-container">  
+    <button mat-icon-button (click)="previousSlide()">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+    <div class="blog" [style.transform]="'translateX(' + (-slideIndex * 100) + '%)'">
+     <mat-card *ngFor="let blog of blogs" class="blog-content" >
+      <div class="card-container">
+        <div class="image-container">
+          <a href="#">
+          <img [src]='blog.img' alt="Image">
+        </a>
+        </div>
+        <div class="content-container">
+          <h2>{{blog.title}}</h2>
+          <p>{{blog.content}}</p>
+        </div>
+      </div>
+    </mat-card> 
+    </div>
+    <button mat-icon-button (click)="nextSlide()">
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </button>
+  </div>
+  
+  
+  <!-- testimonials -->
+  <h1>Students Feedback</h1>
+  <div class="container">
+    <mat-card class="example-card" *ngFor="let testimonial of testimonials">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image">
+          <img mat-card-image [src]='testimonial.image' alt="....." class="test-image">
+      </div>
+        <mat-card-title>{{testimonial.name}}</mat-card-title>
+        <mat-card-subtitle>{{testimonial.course}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p><mat-icon class="quote-icon">format_quote</mat-icon>{{testimonial.quote}}</p>
+        <div class="rating-stars">
+          <mat-icon *ngFor="let i of [1, 2, 3, 4, 5]" [ngClass]="{'active': testimonial.rating >= i}">star</mat-icon>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+   
+    
+  
+  
+   
+    
+    

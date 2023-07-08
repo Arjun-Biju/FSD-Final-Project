@@ -18,15 +18,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { MatCardModule } from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BlogsComponent } from './blogs/blogs.component';
+import { RegistrationFormComponent } from './registration-form/registration-form.component';
+
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BlogsComponent,
+    RegistrationFormComponent
   ],
   imports: [
     BrowserModule,
+    // FontAwesomeModule,
     HttpClientModule,
     AppRoutingModule,
     CommonModule,
@@ -41,7 +49,8 @@ import { MatCardModule } from '@angular/material/card';
     MatFormFieldModule,
     MatSliderModule,
     FormsModule,
-    MatCardModule
+    MatCardModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

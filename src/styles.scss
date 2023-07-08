@@ -1,11 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@flaticon/flaticon-uicons/css/all/all.css";
+// @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+// @import "~@fortawesome/fontawesome-free/css/all.css";
 
 mat-sidenav-container {
     width: 200px;
     height: 100vh;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   } 
-
+mat-icon{
+    font-family: 'Material Icons' !important;
+  }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
