@@ -1,0 +1,56 @@
+<!--Job Options-->
+
+<div class="banner">
+    <span class="text"> <h2><b> Prepare for your next career in just 6 months..</b></h2></span>   
+   </div>
+  
+<mat-tab-group>
+    <mat-tab label ="Java Developers">
+        <h4>Responsible for designing, implementing, and maintaining Java-based applications. They work closely with cross-functional teams, including software engineers, system analysts, and quality assurance professionals, to develop high-quality software solutions</h4>
+        <h5>Years of Experience : <b> 5+ years</b> </h5>
+        <h5>Salary Range : <b> $80k to $100k</b> </h5>
+        <h5>Location :<b> Downtown, NewYork</b> </h5>
+        </mat-tab>
+
+    <mat-tab label ="Sr PHP developer">
+        <h4>Responsible for designing, developing, and maintaining web applications and websites using the PHP programming language. They work closely with other members of the development team, such as front-end developers, back-end developers, and designers, to create efficient and user-friendly web solutions.</h4>
+        <h5>Years of Experience : <b>5+ years </b> </h5>
+        <h5>Salary Range : <b> $60k to $80k </b> </h5>
+        <h5>Location :<b> Downtown, NewYork</b> </h5>
+    </mat-tab>
+    <mat-tab label ="AS400 Developers">
+        <h4>Responsibilities:
+            <p>
+            Develop, test, and maintain software applications on the AS/400 platform. <br>
+            Design and implement new features and functionalities based on business requirements. <br>
+            Collaborate with business analysts, system architects, and other team members to gather requirements and define system specifications. <br>
+            Write efficient and optimized code using programming languages such as RPG (Report Program Generator), CL (Control Language), and SQL (Structured Query Language). <br>
+            Perform unit testing and debugging of application programs to ensure they meet the specified requirements and quality standards. <br>
+            Troubleshoot and resolve issues reported by users or identified through testing and monitoring.</p></h4>
+        <h5>Years of Experience : <b> 5+ years </b> </h5>
+        <h5>Salary Range : <b> $110k to $120k </b> </h5>
+        <h5>Location :<b> Downtown, NewYork</b> </h5>
+    </mat-tab>
+    <mat-tab label ="Lead .Net Developers">
+        <h4>Responsible for designing, developing, and maintaining software applications using Microsoft's .NET framework. They specialize in creating efficient and scalable solutions that meet the business requirements.</h4>
+        <h5>Years of Experience : <b> 5+ years </b> </h5>
+        <h5>Salary Range : <b> $90k to $110k</b> </h5>
+        <h5>Location :<b> Downtown, NewYork</b> </h5>
+    </mat-tab>
+</mat-tab-group>
+
+
+
+<!--Check Box-->
+<div class="container">
+    <h2>Your Path to New Career : </h2>
+    <p>Select your options:</p>
+    <div>
+      <label *ngFor="let option of options">
+        <input type="checkbox" [(ngModel)]="selectedOptions[option]">
+        {{ option }}
+      </label>
+    </div>
+    <br>
+    <button (click)="saveSelections()">Save</button>
+  </div>

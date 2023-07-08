@@ -21,6 +21,10 @@ import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BlogsComponent } from './blogs/blogs.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { Session1Component } from './session1/session1.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
+
 
 // import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -30,7 +34,8 @@ import { RegistrationFormComponent } from './registration-form/registration-form
     HeaderComponent,
     FooterComponent,
     BlogsComponent,
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    Session1Component
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,9 @@ import { RegistrationFormComponent } from './registration-form/registration-form
     MatSliderModule,
     FormsModule,
     MatCardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatTableModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
