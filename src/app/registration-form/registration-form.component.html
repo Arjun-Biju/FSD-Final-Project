@@ -32,30 +32,30 @@
       <mat-card-content>
         <form>
           <mat-form-field>
-            <input matInput placeholder="FullName">
+            <input matInput placeholder="FullName" name="username" [(ngModel)]="signupDetails.userName">
           </mat-form-field><br>
           <mat-form-field>
-            <input matInput placeholder="Email ID">
+            <input matInput placeholder="Email ID" name="email" [(ngModel)]="signupDetails.userEmail">
           </mat-form-field><br>
           <mat-form-field>
-            <input matInput placeholder="Password" type="password">
+            <input matInput placeholder="Password" type="password" name="password" [(ngModel)]="signupDetails.password">
           </mat-form-field><br>
           <mat-form-field>
             <input matInput placeholder="Confirm Password" type="password">
           </mat-form-field><br>
           <mat-form-field>
-            <input matInput placeholder="Phone Number">
+            <input matInput placeholder="Phone Number"  name="phonenumber" [(ngModel)]="signupDetails.phoneNumber">
           </mat-form-field><br>
           <mat-form-field>
-            <input matInput placeholder="State">
+            <input matInput placeholder="State"  name="state" [(ngModel)]="signupDetails.state">
           </mat-form-field><br>
           <mat-form-field>
-            <input matInput placeholder="Country">
+            <input matInput placeholder="Country"  name="country" [(ngModel)]="signupDetails.country">
           </mat-form-field><br>
         </form>
       </mat-card-content>
       <mat-card-actions style="justify-content: center;">
-        <button mat-raised-button color="primary">Sign Up</button>
+        <button mat-raised-button color="primary" (click)="onSignupSubmission()">Sign Up</button>
       </mat-card-actions>
     </mat-card>
   </div>

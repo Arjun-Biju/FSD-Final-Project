@@ -19,17 +19,23 @@ export class HeaderComponent {
   sidenavOpened = false;
   username = "";
   password = "";
+  status = "";
+  showLogin = false;
   baseURL = "https://localhost:7155"
   onSubmit(){
-    var formData = new FormData();
-    const headers = new HttpHeaders();
+  
+    let jsonData = {"userEmail":this.username, "password":this.password}
     
-    formData.append('email',this.username)
-    formData.append('password',this.password)
-    var data = {'email':this.username,'password':this.password}
-      this.http.post(this.baseURL + '/api/User/Login', data).subscribe(
+      this.http.post(this.baseURL + '/api/User/Login', jsonData).subscribe(
         (response) => {
           console.log(response)
+          if(parseInt(JSON.parse(JSON.stringify(response)).id) > 1){
+            this.status = "SUCCESS!!"
+            this.showLogin=true;
+          }else{
+            this.status = "FAILED!!"
+            this.showLogin=false;
+          }
         },
 
         (error) => {

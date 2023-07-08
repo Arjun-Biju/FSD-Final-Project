@@ -3,6 +3,7 @@
   <a mat-button routerLink="/">For Business</a>
   <a mat-button routerLink="/">For Universities</a>
   <a mat-button routerLink="/">For Students</a>
+  <span style="color: white;" *ngIf="showLogin">TEST LOGIN</span>
 </div>
 <mat-toolbar class="split-header">
   <button mat-icon-button (click)="toggleSidenav()">
@@ -27,8 +28,8 @@
 
 
 <mat-sidenav-container style="width: 100%;">
-  <mat-sidenav #sidenav mode="side" [opened]="sidenavOpened"  style="background-color: rgb(255, 222, 92); width: 200px;">
-    <mat-nav-list style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-left: 5px; line-height: 30px;">
+  <mat-sidenav #sidenav mode="side" [opened]="sidenavOpened"  style="background-color: rgb(255, 222, 92); width: 200px; height: 600px;">
+    <mat-nav-list style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-left: 5px; line-height: 20px;">
       <span><b>Find your new career</b></span>
       <a mat-list-item routerLink="/option1" href="#">
         <span>For Business</span>
@@ -88,6 +89,7 @@
         </div>
         <button type="submit">Login</button>
       </form>
+      <p>{{status}}</p>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
