@@ -1,0 +1,297 @@
+/* Adjustments for overall footer */
+.footer-style-ten {
+    background-color: #222;
+    padding: 40px 0;
+  }
+  
+  /* Container styles */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Logo styles */
+  .logo img {
+    max-height: 90px;
+  }
+  
+  /* Footer intro styles */
+  .footer-intro {
+    flex: 0 0 30%;
+    max-width: 30%;
+    margin-bottom: 40px;
+  }
+  
+  .footer-intro p {
+    margin-top: 30px;
+  }
+  
+  /* Footer links styles */
+  .footer-links {
+    flex: 0 0 25%;
+    max-width: 25%;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  .footer-links h2 {
+    margin-bottom: 15px;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 10px;
+   
+  }
+  .footer-nav-link li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-nav-link li a {
+    color:rgba(255,255,255,.7);
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-nav-link li a:hover {
+    color: yellow;
+  }
+  
+  
+  /* Footer links styles */
+  .footer-links h2,
+  .footer-links ul li a {
+    font-size: 18px;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links ul li a:hover {
+    color: yellow;
+  }
+  
+  /* Footer courses styles */
+  .footer-courses h2,
+  .footer-courses ul li a {
+    font-size: 18px;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-courses ul li a:hover {
+    color: yellow;
+  }
+  
+  /* Footer address styles */
+  .footer-address h2,
+  .footer-address p {
+    font-size: 18px;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-address p a {
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-address p a:hover {
+    color: yellow;
+  }
+  
+  
+  
+  /* Footer courses styles */
+  .footer-courses {
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin-bottom: 30px;
+  }
+  
+  .footer-courses h2 {
+    margin-bottom: 15px;
+  }
+  
+  .footer-courses ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Footer address styles */
+  .footer-address {
+    flex: 0 0 20%;
+    max-width: 20%;
+    margin-bottom: 30px;
+  }
+  
+  .footer-address h2 {
+    margin-bottom: 15px;
+  }
+  
+  .footer-address p {
+    margin-bottom: 35px;
+  }
+  
+  .footer-address ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Social icon styles */
+  .social-icon li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .social-icon li a {
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  /* Bottom text styles */
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Hide on small screens */
+  .d-none {
+    display: none !important;
+  }
+  
+  .text-white a {
+    color:rgba(255,255,255,.7);
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .text-white a:hover {
+    color: yellow;
+  }
+  
+  .text-white .mt-15 {
+    margin-top: 15px;
+  }
+  
+  .text-white .mb-45 {
+    margin-bottom: 45px;
+  }
+  
+  .phone-email {
+    color:rgba(255,255,255,.7) ;
+  }
+  .open-button {
+    background-color: #002e5c;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      /* opacity: 0.8; */
+      position: fixed;
+      bottom: 23px;
+      right: 55px;
+      width: 280px;
+      z-index: 5000;
+      font-weight: bold;
+      border-radius: 8px;
+  }
+  
+  .open-button:hover {
+    background-color: #45a049; /* Darker green background color on hover */
+  }
+  
+  .scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffb209;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .scroll-top:hover {
+    background-color: #c49125;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .scroll-top:focus {
+    outline: none;
+  }
+  
+  .scroll-top mat-icon {
+    font-size: 24px;
+    color: #333333;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-container .mat-form-field {
+    width: 100%;
+  }
+  
+  .form-container button {
+    background-color: #4CAF50;
+    color: #4CAF50;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-container button:hover {
+    background-color: #45a049;
+  }
+  .d-flex {
+    display: flex;
+  }
+  
+  .social-icon {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .social-icon li {
+    margin-right: 10px;
+  }
+  
+  .social-icon a {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon a:hover {
+    color: #007bff;
+  }
+  
+  .social-icon fa-icon {
+    font-size: 24px;
+  }
