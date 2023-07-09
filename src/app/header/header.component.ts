@@ -18,6 +18,7 @@ export class HeaderComponent {
   sidenav!: MatSidenav;
   sidenavOpened = false;
   username = "";
+  fullname = "";
   password = "";
   status = "";
   showLogin = false;
@@ -29,17 +30,18 @@ export class HeaderComponent {
       this.http.post(this.baseURL + '/api/User/Login', jsonData).subscribe(
         (response) => {
           console.log(response)
-          if(parseInt(JSON.parse(JSON.stringify(response)).id) > 1){
-            this.status = "SUCCESS!!"
+          if(parseInt(JSON.parse(JSON.stringify(response)).id) > 0){
+            this.fullname=JSON.parse(JSON.stringify(response)).userName;
             this.showLogin=true;
-          }else{
-            this.status = "FAILED!!"
-            this.showLogin=false;
+            this.status = "";
+            this.onSuccessfulLogin();
           }
         },
 
         (error) => {
           console.log(error)
+          this.status = "Incorrect Login"
+          this.showLogin=false;
         }
       )
   }
@@ -75,5 +77,12 @@ export class HeaderComponent {
 
   toggleSidenav() {
     this.sidenavOpened = !this.sidenavOpened;
+  }
+  showPopup: boolean = false;
+  openPopup() {
+    this.showPopup = !(this.showPopup);
+  }
+  onSuccessfulLogin(){
+    this.showPopup = false;
   }
 }

@@ -3,7 +3,7 @@
   <a mat-button routerLink="/">For Business</a>
   <a mat-button routerLink="/">For Universities</a>
   <a mat-button routerLink="/">For Students</a>
-  <span style="color: white;" *ngIf="showLogin">TEST LOGIN</span>
+  <span id="avatarname" style="color: white;" *ngIf="showLogin">Hello, <strong>{{fullname}}</strong></span>
 </div>
 <mat-toolbar class="split-header">
   <button mat-icon-button (click)="toggleSidenav()">
@@ -19,7 +19,7 @@
         <span class="spacer" style="margin-left: 950px;"></span>
         <a mat-button routerLink="/">Post Your Knowledge</a>
         <b>
-        <a mat-button routerLink="/">LOGIN</a>
+        <a mat-button routerLink="/" (click)="openPopup()">LOGIN</a>
         <a mat-button routerLink="/">SIGN UP</a>
         </b>
     </div>
@@ -76,20 +76,20 @@
         <mat-icon>keyboard_arrow_right</mat-icon>
       </button>
     </div>
-    <div class="login-form">
+    <div class="popup" *ngIf="showPopup">
       <h2>Login</h2>
       <form (ngSubmit)="onSubmit()">
         <div class="form-group">
-          <label for="username">Username:</label>
+          <label for="username">Username:</label><br>
           <input type="text" id="username" [(ngModel)]="username" name="username" required>
         </div>
         <div class="form-group">
-          <label for="password">Password:</label>
+          <label for="password">Password:</label><br>
           <input type="password" id="password" [(ngModel)]="password" name="password" required>
         </div>
+        <p style="color: red;">{{status}}</p>
         <button type="submit">Login</button>
       </form>
-      <p>{{status}}</p>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

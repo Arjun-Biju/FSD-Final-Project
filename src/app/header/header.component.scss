@@ -83,3 +83,65 @@ a{
   button{
     z-index: 2;
   }
+
+
+  #avatarname {
+    float: right;
+    justify-content: center;
+    margin-right: 25px;
+    margin-top: 10px;
+  }
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    width: 100%;
+  }
+  
+  .popup h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .popup form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .popup .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .popup label {
+    font-weight: bold;
+  }
+  
+  .popup input[type="text"],
+  .popup input[type="password"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 230px;
+  }
+  
+  .popup button[type="submit"] {
+    padding: 8px 12px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .popup p {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
