@@ -12,8 +12,6 @@ import { UserServiceService } from 'src/services/user-service.service';
 })
 export class HeaderComponent {
   showFiller = false;
-  @Output() showPopupChange = new EventEmitter<boolean>();
-
   constructor(private userservice:UserServiceService, private http:HttpClient, private sharedService: SharedService) {
     
   }

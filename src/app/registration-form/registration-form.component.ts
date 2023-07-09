@@ -20,6 +20,7 @@ ngOnInit(){
 constructor(private http:HttpClient,private sharedService: SharedService) {
 
 }
+errorstatus= "";
 onSignupSubmission(){
 this.http.post(this.baseURL + '/api/User/UserRegistration', this.signupDetails).subscribe(
   (response) => {
@@ -28,8 +29,13 @@ this.http.post(this.baseURL + '/api/User/UserRegistration', this.signupDetails).
   },
 
   (error) => {
-    console.log(error)
+    console.log(error);
+    this.errorstatus = "Registration failed";
   }
 )
+}
+
+onSignupCancel(){
+  this.showPopUp = false;
 }
 }

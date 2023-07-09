@@ -55,8 +55,10 @@
         </form>
       </mat-card-content>
       <mat-card-actions style="justify-content: center;">
-        <button mat-raised-button color="primary" (click)="onSignupSubmission()">Sign Up</button>
+        <button mat-raised-button color="primary" (click)="onSignupSubmission()" style="margin-right: 10px;">Sign Up</button>
+        <button mat-raised-button color="warn" (click)="onSignupCancel()" style="margin-left: 10px;">Cancel</button>
       </mat-card-actions>
+      <span>{{errorstatus}}</span>
     </mat-card>
   </div>
   
