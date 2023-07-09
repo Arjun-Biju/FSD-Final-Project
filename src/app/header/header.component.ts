@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { UserServiceService } from 'src/services/user-service.service';
@@ -11,6 +11,8 @@ import { UserServiceService } from 'src/services/user-service.service';
 })
 export class HeaderComponent {
   showFiller = false;
+  @Output() showPopupChange = new EventEmitter<boolean>();
+
   constructor(private userservice:UserServiceService, private http:HttpClient) {
     
   }
@@ -78,11 +80,24 @@ export class HeaderComponent {
   toggleSidenav() {
     this.sidenavOpened = !this.sidenavOpened;
   }
+
+  showPopUp: boolean = false;
   showPopup: boolean = false;
+
   openPopup() {
     this.showPopup = !(this.showPopup);
   }
   onSuccessfulLogin(){
     this.showPopup = false;
+  }
+
+
+  openPopUp() {
+    this.showPopUp = !(this.showPopUp)
+    this.showPopupChange.emit(this.showPopup);
+  }
+  onSuccessfulSignUp(){
+    this.showPopUp = false;
+    this.showPopupChange.emit(this.showPopup);
   }
 }

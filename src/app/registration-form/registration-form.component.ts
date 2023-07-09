@@ -8,10 +8,11 @@ import { UserRegistration } from 'src/dtos/user-registration';
   styleUrls: ['./registration-form.component.scss']
 })
 export class RegistrationFormComponent {
+showPopUp: boolean = false;
 signupDetails:UserRegistration = new UserRegistration()
 baseURL = "https://localhost:7155"
 constructor(private http:HttpClient) {
-  
+
 }
 onSignupSubmission(){
 this.http.post(this.baseURL + '/api/User/UserRegistration', this.signupDetails).subscribe(

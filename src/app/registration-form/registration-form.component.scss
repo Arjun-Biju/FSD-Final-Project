@@ -1,15 +1,32 @@
-.signup-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 800px;
-  }
+// .signup-container {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 800px;
+//   }
   
-  mat-card {
-    width: 530px;
-  }
+//   mat-card {
+//     width: 530px;
+//   }
 
-  mat-form-field {
-    width: 500px;
-  }
-  
+mat-form-field {
+  width: 450px;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure the popup appears on top of other elements */
+}
+
+.popup mat-card {
+  width: 530px; /* Adjust the width as needed */
+  background-color: white;
+  padding: 20px;
+}
