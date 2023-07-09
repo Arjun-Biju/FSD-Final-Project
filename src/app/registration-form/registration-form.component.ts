@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { UserRegistration } from 'src/dtos/user-registration';
+import { SharedService } from 'src/services/shared.service';
 
 @Component({
   selector: 'app-registration-form',
@@ -8,16 +9,22 @@ import { UserRegistration } from 'src/dtos/user-registration';
   styleUrls: ['./registration-form.component.scss']
 })
 export class RegistrationFormComponent {
-showPopUp: boolean = false;
+@Input() showPopUp: boolean = false;
 signupDetails:UserRegistration = new UserRegistration()
-baseURL = "https://localhost:7155"
-constructor(private http:HttpClient) {
+baseURL = "https://localhost:7155";
+ngOnInit(){
+  this.sharedService.signupPopupAction.subscribe(() => {
+    this.showPopUp=!(this.showPopUp);
+  });
+}
+constructor(private http:HttpClient,private sharedService: SharedService) {
 
 }
 onSignupSubmission(){
 this.http.post(this.baseURL + '/api/User/UserRegistration', this.signupDetails).subscribe(
   (response) => {
     console.log(response)
+    this.showPopUp = false;
   },
 
   (error) => {

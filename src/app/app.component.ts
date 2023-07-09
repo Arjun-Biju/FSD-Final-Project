@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Learntos2';
+  showPopUp: boolean = false;
+
+  onShowPopupChange(value: boolean) {
+    this.showPopUp = value;
+  }
 }

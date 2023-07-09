@@ -20,7 +20,7 @@
         <a mat-button routerLink="/">Post Your Knowledge</a>
         <b>
         <a mat-button routerLink="/" (click)="openPopup()">LOGIN</a>
-        <a mat-button routerLink="/" (click)="openPopUp()">SIGN UP</a>
+        <a mat-button routerLink="/" (click)="openRegistration()">SIGN UP</a>
         </b>
     </div>
   </div>
@@ -28,7 +28,7 @@
 
 
 <mat-sidenav-container style="width: 100%;">
-  <mat-sidenav #sidenav mode="side" [opened]="sidenavOpened"  style="background-color: rgb(255, 222, 92); width: 200px; height: 600px;">
+  <mat-sidenav #sidenav mode="side" [opened]="sidenavOpened" style="background-color: rgb(255, 248, 219); width: 200px; height: 100%;">
     <mat-nav-list style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-left: 5px; line-height: 20px;">
       <span><b>Find your new career</b></span>
       <a mat-list-item routerLink="/option1" href="#">
@@ -58,8 +58,8 @@
       <!-- Repeat for the other options -->
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content style="text-overflow: clip;">
-    <div class="slider-container">  
+  <mat-sidenav-content style="text-overflow: clip; overflow-x: hidden; overflow-y: hidden;">
+    <!-- <div class="slider-container">  
       <button mat-icon-button (click)="previousSlide()">
         <mat-icon>keyboard_arrow_left</mat-icon>
       </button>
@@ -75,7 +75,31 @@
       <button mat-icon-button (click)="nextSlide()">
         <mat-icon>keyboard_arrow_right</mat-icon>
       </button>
+    </div> -->
+    <div class="blog-container">  
+    <button mat-icon-button (click)="previousSlide()">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+    <div class="blog" [style.transform]="'translateX(' + (-slideIndex * 100) + '%)'">
+     <mat-card *ngFor="let blog of blogs" class="blog-content" >
+      <div class="card-container">
+        <div class="content-container">
+          <h2>{{blog.title}}</h2>
+          <p>{{blog.content}}</p>
+        </div>
+        <div class="image-container">
+          <a href="#">
+          <img [src]='blog.img' alt="Image">
+        </a>
+        </div>
+      </div>
+    </mat-card> 
     </div>
+    <button mat-icon-button (click)="nextSlide()">
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </button>
+  </div>
+
     <div class="popup" *ngIf="showPopup">
       <h2>Login</h2>
       <form (ngSubmit)="onSubmit()">
