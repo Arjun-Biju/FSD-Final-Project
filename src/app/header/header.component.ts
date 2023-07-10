@@ -50,17 +50,21 @@ export class HeaderComponent {
     {
       img:"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5CFC8u8XiXcbSOlVv6JZQx/4e6f898f57f9d798437b3aa22026e30b/CourseraLearners_C_Composition_Hillary_copy__3_.png?auto=format%2Ccompress&dpr=1&w=459&h=497&q=40",
       title: 'Learn without limits',
-      content: 'Start, switch, or advance your career with more than 5,800 courses, Professional Certificates, and degrees from world-class universities and companies.'
+      content: 'Start, switch, or advance your career with more than 5,800 courses, Professional Certificates, and degrees from world-class universities and companies.',
+      showCTA: true
     },
     {
       img:"https://cdn.wallpapersafari.com/59/64/Fh8w39.jpg",
-      title: 'Blog Post 2',
-      content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae nulla a doloribus sequi ex saepe modi quidem, veritatis laudantium placeat cum quia maxime iusto quisquam! Quasi id illo vero iure minima molestiae quae, nihil maxime voluptatum amet asperiores excepturi molestias impedit quas veritatis accusantium aut quis, numquam vel cumque! Tempore.'
+      title: 'A broad selection of courses',
+      content: 'Choose from over 210,000 online video courses with new additions published every month',
+      showCTA: false
+
     },
     {
       img:"https://www.wallpaperflare.com/static/785/353/150/notebook-laptop-computer-keyboard-wallpaper.jpg",
-      title: 'Blog Post 3',
-      content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae nulla a doloribus sequi ex saepe modi quidem, veritatis laudantium placeat cum quia maxime iusto quisquam! Quasi id illo vero iure minima molestiae quae, nihil maxime voluptatum amet asperiores excepturi molestias impedit quas veritatis accusantium aut quis, numquam vel cumque! Tempore.'
+      title: 'Upskill on your schedule',
+      content: 'Learning a schedule at a user-chosen time allows individuals to tailor your learning experience and optimize productivity by incorporating new information and skills when it aligns best with your personal routines and preferences.',
+      showCTA: false
     }
   ];
 

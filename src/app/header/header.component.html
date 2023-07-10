@@ -28,7 +28,7 @@
 
 
 <mat-sidenav-container style="width: 100%;">
-  <mat-sidenav #sidenav mode="side" [opened]="sidenavOpened" style="background-color: rgb(255, 248, 219); width: 200px; height: 100%;">
+  <mat-sidenav #sidenav mode="side" [opened]="sidenavOpened" style="background-color: rgb(219, 219, 219); width: 200px; height: 100%;">
     <mat-nav-list style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-left: 5px; line-height: 20px;">
       <span><b>Find your new career</b></span>
       <a mat-list-item routerLink="/option1" href="#">
@@ -77,7 +77,7 @@
       </button>
     </div> -->
     <div class="blog-container">  
-    <button mat-icon-button (click)="previousSlide()">
+    <button mat-icon-button class="prevslidebutton" (click)="previousSlide()">
       <mat-icon>keyboard_arrow_left</mat-icon>
     </button>
     <div class="blog" [style.transform]="'translateX(' + (-slideIndex * 100) + '%)'">
@@ -86,6 +86,8 @@
         <div class="content-container">
           <h2>{{blog.title}}</h2>
           <p>{{blog.content}}</p>
+          <button type="submit" *ngIf="blog.showCTA" class="jffbutton">Join for Free</button>
+          <button type="submit" *ngIf="blog.showCTA" class="tlfbbutton">Try Learntos for Business</button>
         </div>
         <div class="image-container">
           <a href="#">
@@ -95,7 +97,7 @@
       </div>
     </mat-card> 
     </div>
-    <button mat-icon-button (click)="nextSlide()">
+    <button mat-icon-button class="nextslidebutton" (click)="nextSlide()">
       <mat-icon>keyboard_arrow_right</mat-icon>
     </button>
   </div>
